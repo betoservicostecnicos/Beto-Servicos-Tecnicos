@@ -10,7 +10,6 @@
     
     header { background: #0f172a; color: white; padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 10px; }
     
-    /* Logo baseado na gravação de tela (Hexágono com raio amarelo e borda amarela) */
     .logo-container { display: flex; align-items: center; text-decoration: none; gap: 12px; }
     .logo-hexagon { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; }
     .logo-hexagon svg { width: 100%; height: 100%; }
@@ -37,7 +36,12 @@
     .card h3 { margin-bottom: 0.8rem; color: #0f172a; }
     .card p { color: #64748b; font-size: 0.95rem; }
     
-    /* Bloco Informativo de Diagnóstico */
+    /* Galeria de Fotos Reais */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .gallery-item { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; }
+    .gallery-item p { padding: 1rem; font-size: 0.95rem; font-weight: 600; color: #334155; text-align: center; }
+
     .diagnostic-box {
       max-width: 800px;
       margin: 2.5rem auto 0;
@@ -53,13 +57,16 @@
     .diagnostic-box p { color: #475569; font-size: 0.95rem; margin: 0; }
     .diagnostic-price { font-weight: bold; color: #0f172a; background: #fef3c7; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde68a; }
 
+    .faq-item { background: white; padding: 1.2rem; margin-bottom: 1rem; border-radius: 6px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .faq-item h4 { color: #0f172a; margin-bottom: 0.4rem; }
+    .faq-item p { color: #64748b; font-size: 0.95rem; }
+
     .features { background-color: #e2e8f0; padding: 3rem 8%; text-align: center; }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
     .feature-item { font-weight: 600; color: #334155; }
 
     footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 2rem; }
 
-    /* Botão Flutuante do WhatsApp */
     .whatsapp-float {
       position: fixed;
       width: 58px;
@@ -79,9 +86,7 @@
       text-decoration: none;
       transition: 0.3s;
     }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-    }
+    .whatsapp-float:hover { transform: scale(1.08); }
   </style>
 </head>
 <body>
@@ -101,14 +106,16 @@
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
-      <a href="#diferenciais">Diferenciais</a>
+      <a href="#galeria">Projetos</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Soluções Rápidas e Seguras em Eletricidade e Refrigeração</h1>
-    <p>Manutenção, instalação e reparação residencial e comercial com garantia de qualidade e atendimento transparente.</p>
+    <p>Manutenção, instalação e reparação residencial e comercial em Maputo e Matola com garantia e transparência.</p>
     <a href="https://wa.me/258874384588?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Beto%20Serviços%20Técnicos!" target="_blank" class="btn">
       💬 Solicitar Orçamento via WhatsApp
     </a>
@@ -117,7 +124,7 @@
   <section id="sobre" class="section">
     <h2 class="section-title">Sobre a Beto Serviços Técnicos</h2>
     <p style="max-width: 750px; margin: 0 auto; color: #475569; font-size: 1.05rem;">
-      Somos especializados em prestação de serviços técnicos na área de eletricidade, refrigeração e reparação de electrodomésticos. Trabalhamos com foco na segurança do seu imóvel, diagnóstico preciso e soluções duradouras para os seus equipamentos.
+      Somos especializados na prestação de serviços técnicos de eletricidade, refrigeração e reparação de electrodomésticos. Atendemos residências e empresas na <strong>Cidade de Maputo, Matola e arredores</strong>, focando sempre na segurança, diagnóstico preciso e rapidez.
     </p>
   </section>
 
@@ -134,14 +141,72 @@
       </div>
       <div class="card">
         <h3>🛠️ Reparação de Electrodomésticos</h3>
-        <p>Conserto rápido e eficiente de máquinas de lavar roupa, micro-ondas, fornos elétricos, fogões e outros aparelhos domésticos.</p>
+        <p>Conserto rápido de máquinas de lavar roupa, micro-ondas, fornos elétricos, fogões e outros aparelhos domésticos.</p>
       </div>
     </div>
 
-    <!-- Bloco de Diagnóstico Técnico -->
     <div class="diagnostic-box">
       <h3>🔍 Taxa de Diagnóstico Técnico: <span class="diagnostic-price">500 MT</span></h3>
-      <p>A taxa de diagnóstico no local é de <strong>500 MT</strong>. Este valor inclui a deslocação e avaliação técnica detalhada da avaria. <em>Observação: O valor do diagnóstico é <u>totalmente deduzido</u> do custo do serviço caso o orçamento seja aprovado e realizado connosco.</em></p>
+      <p>A taxa de diagnóstico no local é de <strong>500 MT</strong> (inclui deslocação e avaliação completa). <em>O valor pago é <u>100% deduzido</u> do custo do serviço caso o orçamento seja aprovado e realizado connosco.</em></p>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <h2 class="section-title">Nossos Trabalhos na Prática</h2>
+    <p style="margin-bottom: 2rem; color: #475569;">Confira fotos reais de intervenções e manutenções efetuadas pela nossa equipa.</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="IMG-20260402-WA0004.jpg" alt="Instalação e Montagem de Quadro Elétrico">
+        <p>⚡ Montagem e Reparação de Quadro Elétrico</p>
+      </div>
+      <div class="gallery-item">
+        <img src="a7e8bd4cf39c42d0acc2e6c5fe77ae8f (1).png" alt="Manutenção e Carga de Gás em AC">
+        <p>❄️ Manutenção Técnica e Carga de Gás em AC</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20260418_181038.heic" alt="Reparação de Arrefecedor e Tubagem">
+        <p>🛠️ Reparação de Sistema de Arrefecimento</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="section" style="background-color: #f1f5f9;">
+    <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+    <div class="grid">
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Serviço rápido e eficiente na reparação do meu ar-condicionado. Ficou 100% operacional e o atendimento foi excelente."</p>
+        <h4 style="margin-top: 1rem; color: #0f172a;">— Sr. Jamal (Mavalane)</h4>
+      </div>
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Graças a Deus a máquina está a funcionar bem! Até já recomendei o contacto à minha irmã para fazer o diagnóstico na máquina dela."</p>
+        <h4 style="margin-top: 1rem; color: #0f172a;">— Sra. Zarina (Matola)</h4>
+      </div>
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"A geleira está a congelar super bem após a intervenção técnica. Excelente acompanhamento e serviço!"</p>
+        <h4 style="margin-top: 1rem; color: #0f172a;">— Mercearia Jeje</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2 class="section-title">Perguntas Frequentes</h2>
+    <div style="max-width: 750px; margin: 0 auto;">
+      <div class="faq-item">
+        <h4>Como funciona a taxa de diagnóstico de 500 MT?</h4>
+        <p>A taxa cobre a ida do técnico ao local e o teste detalhado do equipamento. Se optar por fazer a reparação connosco, descontamos esse valor do orçamento final.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quais são as áreas de atendimento?</h4>
+        <p>Prestamos serviços em toda a Cidade de Maputo, Matola e zonas vizinhas.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quais são os meios de pagamento aceites?</h4>
+        <p>Aceitamos M-Pesa, e-Mola, Transferência Bancária e Numerário.</p>
+      </div>
     </div>
   </section>
 
@@ -157,17 +222,16 @@
 
   <section id="contato" class="section">
     <h2 class="section-title">Precisa de Ajuda Técnica?</h2>
-    <p style="margin-bottom: 2rem; color: #475569;">Clique no botão abaixo para falar diretamente connosco pelo WhatsApp e agendar uma visita.</p>
+    <p style="margin-bottom: 2rem; color: #475569;">Clique no botão abaixo para falar diretamente connosco pelo WhatsApp (+258 87 438 4588) e agendar uma visita.</p>
     <a href="https://wa.me/258874384588?text=Olá,%20preciso%20de%20atendimento%20técnico!" target="_blank" class="btn">
       📱 Agendar Visita Técnica
     </a>
   </section>
 
   <footer>
-    <p>&copy; 2026 Beto Serviços Técnicos. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Beto Serviços Técnicos - Maputo. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Flutuante do WhatsApp -->
   <a href="https://wa.me/258874384588?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica!" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     💬
   </a>
