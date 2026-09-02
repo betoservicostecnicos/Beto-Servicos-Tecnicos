@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R2XET39JW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6R2XET39JW');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BETO SERVIÇOS TÉCNICOS | Eletricidade, Refrigeração e Reparação de Eletrodomésticos</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+    body { color: #1e293b; line-height: 1.6; background-color: #f8fafc; }
+    
+    header { background: #0f172a; color: white; padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 10px; }
+    
+    .logo-container { display: flex; align-items: center; text-decoration: none; gap: 12px; }
+    .logo-img { height: 50px; width: auto; max-width: 160px; object-fit: contain; }
+    
+    .logo-text { font-size: 1.2rem; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; }
+    .logo-text span { color: #f59e0b; display: block; font-size: 0.75rem; font-weight: normal; text-transform: uppercase; }
+
+    header nav a { color: #f8fafc; text-decoration: none; margin-left: 1.2rem; font-size: 0.9rem; font-weight: 500; }
+    header nav a:hover { color: #f59e0b; }
+    
+    .hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://picsum.photos/1200/600?technical') center/cover; color: white; text-align: center; padding: 5rem 1rem; }
+    .hero h1 { font-size: 2.3rem; margin-bottom: 1rem; color: #ffffff; }
+    .hero p { font-size: 1.15rem; margin-bottom: 2rem; color: #cbd5e1; max-width: 650px; margin-left: auto; margin-right: auto; }
+    
+    .btn { display: inline-block; background-color: #25d366; color: white; padding: 0.9rem 2rem; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+    .btn:hover { background-color: #1ebc57; transform: translateY(-2px); }
+    
+    .section { padding: 4rem 8%; text-align: center; }
+    .section-title { font-size: 1.8rem; margin-bottom: 2.5rem; color: #0f172a; position: relative; }
+    .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #f59e0b; margin: 8px auto 0; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+    .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #f59e0b; }
+    .card h3 { margin-bottom: 0.8rem; color: #0f172a; }
+    .card p { color: #64748b; font-size: 0.95rem; }
+    
+    /* Galeria de Fotos Reais */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .gallery-item { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; }
+    .gallery-item p { padding: 1rem; font-size: 0.95rem; font-weight: 600; color: #334155; text-align: center; }
+
+    .diagnostic-box {
+      max-width: 800px;
+      margin: 2.5rem auto 0;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #f59e0b;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .diagnostic-box h3 { color: #0f172a; font-size: 1.15rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+    .diagnostic-box p { color: #475569; font-size: 0.95rem; margin: 0; }
+    .diagnostic-price { font-weight: bold; color: #0f172a; background: #fef3c7; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde68a; }
+
+    .faq-item { background: white; padding: 1.2rem; margin-bottom: 1rem; border-radius: 6px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .faq-item h4 { color: #0f172a; margin-bottom: 0.4rem; }
+    .faq-item p { color: #64748b; font-size: 0.95rem; }
+
+    .features { background-color: #e2e8f0; padding: 3rem 8%; text-align: center; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .feature-item { font-weight: 600; color: #334155; }
+
+    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 2rem; }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 58px;
+      height: 58px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.08); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo-container">
+      <img src="1788248460376.png" alt="Logótipo Beto Serviços Técnicos" class="logo-img">
+      <div class="logo-text">
+        BETO <span>Serviços Técnicos</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Projetos</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Soluções Rápidas e Seguras em Eletricidade, Refrigeração e Reparação de Eletrodomésticos</h1>
+    <p>Manutenção, instalação e reparação residencial e comercial em Maputo e Matola com garantia e transparência.</p>
+    <a href="https://wa.me/258874384588?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Beto%20Serviços%20Técnicos!" target="_blank" class="btn">
+      💬 Solicitar Orçamento via WhatsApp
+    </a>
+  </section>
+
+  <section id="sobre" class="section">
+    <h2 class="section-title">Sobre a Beto Serviços Técnicos</h2>
+    <p style="max-width: 750px; margin: 0 auto; color: #475569; font-size: 1.05rem;">
+      Somos especializados na prestação de serviços técnicos de eletricidade, refrigeração e reparação de electrodomésticos. Atendemos residências e empresas na <strong>Cidade de Maputo, Matola e arredores</strong>, focando sempre na segurança, diagnóstico preciso e rapidez.
+    </p>
+  </section>
+
+  <section id="servicos" class="section" style="background-color: #f1f5f9;">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>⚡ Instalações e Reparações Elétricas</h3>
+        <p>Montagem e reparo de redes elétricas, resolução de curtos-circuitos, instalação de disjuntores, tomadas, iluminação e quadros elétricos.</p>
+      </div>
+      <div class="card">
+        <h3>❄️ Refrigeração & Ar-Condicionado</h3>
+        <p>Instalação, limpeza, higienização, manutenção e recarga de gás em AC, congeladores e geleiras.</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Reparação de Electrodomésticos</h3>
+        <p>Conserto rápido de máquinas de lavar roupa, micro-ondas, fornos elétricos, fogões, ferros de engomar e outros aparelhos domésticos.</p>
+      </div>
+    </div>
+
+    <div class="diagnostic-box">
+      <h3>🔍 Taxa de Diagnóstico Técnico: <span class="diagnostic-price">500 MT</span></h3>
+      <p>A taxa de diagnóstico no local é de <strong>500 MT</strong> (inclui deslocação e avaliação completa). <em>O valor pago é <u>100% deduzido</u> do custo do serviço caso o orçamento seja aprovado e realizado connosco.</em></p>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <h2 class="section-title">Nossos Trabalhos na Prática</h2>
+    <p style="margin-bottom: 2rem; color: #475569;">Confira fotos reais de intervenções e manutenções efetuadas pela nossa equipa.</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="copilot_image_1788342179329.jpeg" alt="Manutenção e Reparação de Congelador">
+        <p>🧊 Reparação e Manutenção de Sistema de Refrigeração</p>
+      </div>
+      <div class="gallery-item">
+        <img src="1772128545939.png" alt="Manutenção e Recarga de Gás em AC">
+        <p>❄️ Manutenção Técnica e Carga de Gás em AC</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20241128_104653.jpg" alt="Montagem e Instalação de Suporte para AC">
+        <p>🛠️ Instalação e Ajuste Técnico de AC</p>
+      </div>
+      <div class="gallery-item">
+        <img src="1772130288584.png" alt="Higienização e Limpeza de Ar-Condicionado">
+        <p>🧼 Limpeza e Higienização Preventiva</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20240824_101415.jpg" alt="Manutenção Detalhada do Filtro e Evaporadora">
+        <p>⚙️ Manutenção Detalhada e Filtros de AC</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20260418_181038.jpg" alt="Reparação de Sistema de Arrefecimento e Tubagens">
+        <p>🧊 Reparação de Tubagem e Arrefecimento</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20251024_104549.jpg" alt="Diagnóstico com Equipamentos de Medição">
+        <p>🔍 Diagnóstico Técnico com Multímetro</p>
+      </div>
+      <div class="gallery-item">
+        <img src="20260407_110510.jpg" alt="Inspecção Elétrica e Teste de Ligações">
+        <p>⚡ Inspecção Elétrica e Teste de Ligações</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="section" style="background-color: #f1f5f9;">
+    <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+    <p style="margin-bottom: 2rem; color: #475569;">A satisfação de quem confia nos nossos serviços técnicos em Maputo e Matola.</p>
+    
+    <div class="grid">
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Serviço super rápido e eficiente na reparação do meu ar-condicionado. Chegaram no horário combinado, detetaram a avaria rapidamente e deixaram o equipamento 100% operacional. Atendimento muito profissional!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Jamal</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Mavalane, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Graças a Deus a máquina de lavar está a funcionar perfeitamente! Gostei imenso da honestidade no diagnóstico. Até já recomendei o contacto à minha irmã para agendar a revisão na máquina dela."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Zarina</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Matola</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"A geleira do estabelecimento está a congelar super bem após a recarga de gás e manutenção técnica. Excelente acompanhamento, rapidez no atendimento e preço justo."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Mercearia Jeje</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Cliente Comercial</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Tivemos um curto-circuito no quadro elétrico de casa e o Beto resolveu tudo com muita segurança e organização. Muito bom saber que podemos contar com técnicos qualificados a qualquer hora."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Eng. Fernando</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Sommerschield, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Troquei o compressor da minha geleira e agora ela está a gelar super bem. Excelente intervenção técnica!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Maura</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Luís Cabral, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Levei meu ferro de engomar a vapor para reparação e fiquei muito satisfeito com o serviço. Agradeço imenso pela honestidade e transparência."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. António</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Bairro Central B, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Instalação perfeita das ventoinhas de parede e reparação excelente nos fogões a gás. Muito satisfeito pelos serviços prestados e pela atenção dada pela Beto Serviços Técnicos."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Clemente</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Baixa, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Fez a reparação do meu ar-condicionado e da geleira. Ambos os equipamentos estão a funcionar impecavelmente bem!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Tomé</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Mavalane, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"A minha máquina de lavar ficou muito melhor após a intervenção técnica da Beto Serviços Técnicos. Excelente trabalho!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Théo Viallard</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Central C, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"O meu congelador está a funcionar super bem. Muito obrigada pela rapidez e excelente intervenção técnica!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Nádia</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Mahotas, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"A minha máquina de lavar ficou em perfeitas condições! Eu pretendia importar uma peça cara, mas o Beto aconselhou-me que não era necessário e colocou-a a funcionar normalmente. Economizei muito, agradeço bastante!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Alan</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Costa do Sol, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Os meus ares-condicionados não estavam a gelar perfeitamente e pensei que fosse falta de gás, mas afinal era apenas sujidade! O Beto economizou o meu bolso com a sua intervenção honesta. Agradeço imenso!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Yasmin</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Central B, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Fiquei sem corrente elétrica fora do horário de expediente e não sabia quem chamar. Recomendaram-me o Beto e ele veio resolver o problema em pouquíssimo tempo! Muito obrigada pela prontidão, continue com esse excelente trabalho!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Miller</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Julius Nyerere, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Agradeço imenso pela intervenção! A máquina de lavar está a funcionar normalmente."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Daniela</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Julius Nyerere, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Desde a intervenção do Beto, tanto o forno como o micro-ondas estão a funcionar super bem. Agradeço muito pela atenção e profissionalismo."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Chade</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Costa do Sol, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"A instalação da máquina de lavar ficou perfeita, estou a desfrutar da melhor forma possível, agradeço pelo conselho de não instalar na varanda de casa, foi muito útil, não preciso de sair para ver a máquina fora. Beto, sabia que roubaram todos os condutores que instalou na casinha na Katembe? Como ninguém vivia ali, acho que teremos de instalar novamente, mas desta vez tem de estar alguém para não roubarem novamente."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Bwete</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Av. Romão Fernando Farinha, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Beto, tanto as lâmpadas como as tomadas que substituiu ainda estão operacionais, agradeço bastante. Descobri que há uma tomada derretida na minha cozinha, chamarei-te para vir substituir quando eu tiver tempo, ando muito ocupada atualmente."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Dra. Lara</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Emília Dausse, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Beto, as panelas de pressão, as chaleiras, os grelhadores, os Ares-Condicionados, os liquidificadores, os ferros de engomar e o micro-ondas estão todos operacionais, agradeço bastante. Aliás, hei de passar o teu número para a minha prima, ela tem um micro-ondas que não está a funcionar."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Dra. Paula</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Ahmed Sekou Touré, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Olá Beto, passei para deixar um parabéns pelos serviços prestados, estou a desfrutar tanto dos ferros de engomar até aos liquidificadores. Amei bastante."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Miguel</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Alto Maé, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Boa tarde Beto, os seus serviços são excelentes, os Ares-Condicionados que vocês instalaram estão a funcionar muito bem, muito obrigado."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sr. Elias</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Costa do Sol, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Beto, a geleira está a gelar bem mas acho que o que você disse sobre a substituição dos vedantes está correto, quando eu tiver dinheiro faremos isso, por enquanto estou a usar assim mesmo."</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Serafina</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Mavalane, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Beto, sabe que eu não acreditei em ti quando disse que o meu ar condicionado voltaria a funcionar normalmente? A única coisa que eu queria era que me procurasse um cliente para despachar aquele AC e comprar novo para instalar, porque chamei uns técnicos que vieram meter refrigerante, só gelou poucos dias e parou... mas com a sua intervenção isso mudou completamente a minha visão e economizou o meu bolso. Agradeço bastante, mereces o meu voto!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Telma</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Av. Eduardo Mondlane, Maputo</span>
+      </div>
+
+      <div class="card" style="border-top-color: #25d366;">
+        <p style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p style="font-style: italic;">"Beto, os seus serviços são excelentes, sabe, nunca imaginei que uma maquina de lavar, parada a quase dois anos voltaria a funcionar normalmente. A maquina, o forno e o microondas estão em perfeitas condições de funcionamento, agradeço bastante pela vossa intervenção, bom trabalho!"</p>
+        <h4 style="margin-top: 1.2rem; color: #0f172a;">— Sra. Firosa</h4>
+        <span style="font-size: 0.85rem; color: #64748b;">Matola 700</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2 class="section-title">Perguntas Frequentes</h2>
+    <div style="max-width: 750px; margin: 0 auto;">
+      <div class="faq-item">
+        <h4>Como funciona a taxa de diagnóstico de 500 MT?</h4>
+        <p>A taxa cobre a ida do técnico ao local e o teste detalhado do equipamento. Se optar por fazer a reparação connosco, descontamos esse valor do orçamento final.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quais são as áreas de atendimento?</h4>
+        <p>Prestamos serviços em toda a Cidade de Maputo, Matola e zonas vizinhas.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quais são os meios de pagamento aceites?</h4>
+        <p>Aceitamos M-Pesa, e-Mola, Transferência Bancária e Numerário.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais" class="features">
+    <h2 class="section-title" style="margin-bottom: 1.5rem;">Por que escolher a Beto Serviços Técnicos?</h2>
+    <div class="features-grid">
+      <div class="feature-item">✔️ Atendimento Ágil</div>
+      <div class="feature-item">✔️ Garantia nos Serviços</div>
+      <div class="feature-item">✔️ Diagnóstico Transparente</div>
+      <div class="feature-item">✔️ Profissionalismo & Segurança</div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <h2 class="section-title">Precisa de Ajuda Técnica?</h2>
+    <p style="margin-bottom: 2rem; color: #475569;">Clique no botão abaixo para falar diretamente connosco pelo WhatsApp (+258 87 438 4588) e agendar uma visita.</p>
+    <a href="https://wa.me/258874384588?text=Olá,%20preciso%20de%20atendimento%20técnico!" target="_blank" class="btn">
+      📱 Agendar Visita Técnica
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Beto Serviços Técnicos - Maputo. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/258874384588?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica!" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
